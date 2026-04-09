@@ -8,7 +8,14 @@
 - 사용한 컨트롤:
     - RadioButton, CheckBox, GroupBox, Label, ListBox, Button, PictureBox
 - 사용한 기술과 구현한 기능:
-    -
+    - 이벤트 기반 프로그래밍(Event-driven Programming) 을 활용하여 사용자의 클릭 및 입력에 즉각 반응하는 UI 구성
+    - CheckedChanged 이벤트를 공통 함수로 연결하여 항목 선택 시 실시간으로 주문 내역과 총 금액이 업데이트되는 피드백 시스템 구현
+    - if - else if 문을 통한 라디오 버튼의 단일 메뉴 선택 판별 및 독립적 if 문을 활용한 체크박스 다중 옵션 중복 합산 로직 설계
+    - 폼 수준의 키 입력 감지(KeyPreview) 와 포커스 제어 기술을 통해 Tab, 방향키, Space, Enter 만으로 조작 가능한 키보드 인터페이스 구현
+    - GroupBox 내부 컨트롤들의 TabIndex 를 정밀하게 제어하여 그룹 간 순환 포커스 및 논리적 사용자 작업 흐름 최적화
+    - Label 의 ForeColor 및 Visible 속성을 동적으로 제어하여 별도의 팝업창 없이 화면 내에서 에러 메시지를 시각화하는 예외 처리 기술 적용
+    - ToString("#,##0") 포맷팅을 적용하여 천 단위 구분 기호가 포함된 가독성 높은 실시간 화폐 단위 출력 기능 구현
+    - ListBox 의 Items 속성을 제어하여 선택된 메뉴의 명칭과 개별 가격을 리스트 형태로 직관적으로 나열하는 주문 확인 시스템 구축
 
 
 
