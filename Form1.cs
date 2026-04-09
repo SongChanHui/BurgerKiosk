@@ -15,6 +15,9 @@ namespace BurgerKiosk
 
         private void btnOrder_Click(object sender, EventArgs e)
         {
+            // 주문 시 이전 에러 메시지 스타일 초기화
+            lblTotalCost.ForeColor = System.Drawing.Color.Blue;
+
             totalCost = 0;         // 누적 금액 초기화
             lstOrder.Items.Clear(); // 리스트 박스 비우기
 
@@ -23,7 +26,16 @@ namespace BurgerKiosk
                 totalCost += 5000;
                 lstOrder.Items.Add("햄버거 5,000원");
             }
-            
+
+            if (!rdoHamBurger.Checked && !rdoBulgogiBurger.Checked && !rdoChickenBurger.Checked)
+            {
+                // 라벨을 사용해 빨간색 경고를 표시
+                lstOrder.Items.Clear();
+                lblTotalCost.Text = "메뉴를 골라주세요";
+                lblTotalCost.ForeColor = System.Drawing.Color.Red;
+                return;
+            }
+
             else if (rdoBulgogiBurger.Checked)
             {
                 totalCost += 4000;
